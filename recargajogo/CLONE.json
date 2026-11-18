@@ -1,0 +1,818 @@
+{
+ "alvo": "https://recargajogo.com.br/",
+ "inicio": "/recargajogo.com.br/index.render.html",
+ "host": "recargajogo.com.br",
+ "quando": "2026-11-17T23:22:30.917Z",
+ "arquivos": [
+  {
+   "url": "https://recargajogo.com.br/",
+   "arquivo": "recargajogo.com.br\\index.html",
+   "tipo": "text/html; charset=utf-8",
+   "bytes": 6174
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/style-11f66254.css",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\style-11f66254.css",
+   "tipo": "text/css",
+   "bytes": 115910
+  },
+  {
+   "url": "https://connect.facebook.net/en_US/fbevents.js",
+   "arquivo": "connect.facebook.net\\en_US\\fbevents.js",
+   "tipo": "application/x-javascript; charset=utf-8",
+   "bytes": 433362
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/static/lib/analytic.91def2c7.iife.js?domain=br",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\static\\lib\\analytic.91def2c7.iife.4a8299ca.js",
+   "tipo": "text/javascript",
+   "bytes": 20206
+  },
+  {
+   "url": "https://datadome.recargajogo.com.br/tags.js",
+   "arquivo": "datadome.recargajogo.com.br\\tags.js",
+   "tipo": "text/javascript",
+   "bytes": 145682
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/polyfills-c14fe4d6.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\polyfills-c14fe4d6.js",
+   "tipo": "text/javascript",
+   "bytes": 108982
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/react-0e2a0c96.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\react-0e2a0c96.js",
+   "tipo": "text/javascript",
+   "bytes": 142499
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/index-e565bf38.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\index-e565bf38.js",
+   "tipo": "text/javascript",
+   "bytes": 663440
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/images-480315a2.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\images-480315a2.js",
+   "tipo": "text/javascript",
+   "bytes": 353613
+  },
+  {
+   "url": "https://connect.facebook.net/signals/config/214992645851330?v=2.9.441&r=stable&domain=recargajogo.com.br&hme=abf59d235177e3601acac6035d7c2a28fadbda4b0c64009bc203ceed9fa8bb90&ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C116%2C162%2C72%2C186%2C110%2C185%2C212%2C264%2C37%2C84%2C284%2C283%2C282%2C14%2C25%2C28%2C40%2C62%2C118%2C68%2C10%2C73%2C112%2C113%2C114%2C120%2C145%2C38%2C36%2C147%2C148%2C149%2C144%2C143%2C173%2C86%2C176%2C174%2C175%2C57%2C69%2C67%2C138%2C19%2C180%2C52%2C335%2C336%2C337%2C334%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C164%2C87%2C127%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C125%2C161%2C165%2C53%2C126%2C29%2C26%2C134%2C79%2C43%2C167%2C166%2C168%2C158%2C156%2C30%2C42%2C66%2C124%2C179%2C80%2C21%2C129%2C93%2C76%2C23%2C97%2C98%2C131%2C96%2C152%2C151%2C155%2C109%2C178%2C181%2C41%2C351%2C353%2C374%2C257%2C239%2C70%2C240%2C238%2C377%2C368%2C59%2C258%2C122%2C146%2C92%2C136%2C61%2C54%2C56%2C128%2C135%2C141%2C140%2C65%2C74%2C169%2C88%2C89%2C130%2C44%2C39%2C60%2C63%2C115%2C183%2C1%2C139%2C16%2C137%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C133%2C101%2C100%2C188%2C189%2C106%2C107%2C9%2C117%2C187%2C58%2C159%2C99%2C91%2C81%2C132%2C121%2C170%2C50%2C160%2C0%2C94%2C153%2C157%2C171%2C45%2C123%2C13%2C190",
+   "arquivo": "connect.facebook.net\\signals\\config\\214992645851330\\index.242db7b7.html",
+   "tipo": "application/x-javascript; charset=utf-8",
+   "bytes": 507001
+  },
+  {
+   "url": "https://www.googletagmanager.com/gtm.js?id=GTM-WGFN7FF5",
+   "arquivo": "www.googletagmanager.com\\gtm.ef298300.js",
+   "tipo": "application/javascript; charset=UTF-8",
+   "bytes": 393143
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/translations-pt-0927931c.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\translations-pt-0927931c.js",
+   "tipo": "text/javascript",
+   "bytes": 170651
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/useBillboards-089e1fd1.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\useBillboards-089e1fd1.js",
+   "tipo": "text/javascript",
+   "bytes": 719
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/useTrackVisit-54a5d6e8.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\useTrackVisit-54a5d6e8.js",
+   "tipo": "text/javascript",
+   "bytes": 220
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/AnnouncementSection-6230db66.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\AnnouncementSection-6230db66.js",
+   "tipo": "text/javascript",
+   "bytes": 3608
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/Toast-e01be05f.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\Toast-e01be05f.js",
+   "tipo": "text/javascript",
+   "bytes": 801
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/CheckInButton-67d80b53.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\CheckInButton-67d80b53.js",
+   "tipo": "text/javascript",
+   "bytes": 1329
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/usePost-4f15b8da.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\usePost-4f15b8da.js",
+   "tipo": "text/javascript",
+   "bytes": 417
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/ViewMain-8d726834.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\ViewMain-8d726834.js",
+   "tipo": "text/javascript",
+   "bytes": 52572
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/error-b311a0fb.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\error-b311a0fb.js",
+   "tipo": "text/javascript",
+   "bytes": 9346
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/BonusDisplayList-cc0b8516.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\BonusDisplayList-cc0b8516.js",
+   "tipo": "text/javascript",
+   "bytes": 2048
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/useBuyNow-949f8a08.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\useBuyNow-949f8a08.js",
+   "tipo": "text/javascript",
+   "bytes": 1129
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/BuyNowLoginModal-3035eb7a.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\BuyNowLoginModal-3035eb7a.js",
+   "tipo": "text/javascript",
+   "bytes": 4138
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/MaintenanceNotice-87c4b1ba.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\MaintenanceNotice-87c4b1ba.js",
+   "tipo": "text/javascript",
+   "bytes": 880
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/LoginIdAuthForm-3a1480a5.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\LoginIdAuthForm-3a1480a5.js",
+   "tipo": "text/javascript",
+   "bytes": 7376
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/br-eb3e44f1.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\br-eb3e44f1.js",
+   "tipo": "text/javascript",
+   "bytes": 71235
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/BotBar-0013d117.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\BotBar-0013d117.js",
+   "tipo": "text/javascript",
+   "bytes": 5736
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/assets-5708658e.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\assets-5708658e.js",
+   "tipo": "text/javascript",
+   "bytes": 1419
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/ResultLayout-bebb55bb.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\ResultLayout-bebb55bb.js",
+   "tipo": "text/javascript",
+   "bytes": 532
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/FormItem-f5cb95e5.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\FormItem-f5cb95e5.js",
+   "tipo": "text/javascript",
+   "bytes": 611
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/BackButton-e1bb4aa5.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\BackButton-e1bb4aa5.js",
+   "tipo": "text/javascript",
+   "bytes": 698
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/Loading-15fb762c.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\Loading-15fb762c.js",
+   "tipo": "text/javascript",
+   "bytes": 1558
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/usePaymentInit-cda105ca.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\usePaymentInit-cda105ca.js",
+   "tipo": "text/javascript",
+   "bytes": 7680
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/useChannels-3cc63d13.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\useChannels-3cc63d13.js",
+   "tipo": "text/javascript",
+   "bytes": 399
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/useEvents-cf57a312.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\useEvents-cf57a312.js",
+   "tipo": "text/javascript",
+   "bytes": 2528
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/useCountdown-3d2d1127.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\useCountdown-3d2d1127.js",
+   "tipo": "text/javascript",
+   "bytes": 261
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/useRedirects-0cb9c98f.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\useRedirects-0cb9c98f.js",
+   "tipo": "text/javascript",
+   "bytes": 1207
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/FlashSaleItemSection-5fb15ebc.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\FlashSaleItemSection-5fb15ebc.js",
+   "tipo": "text/javascript",
+   "bytes": 8771
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/RoleSelection-cf253794.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\RoleSelection-cf253794.js",
+   "tipo": "text/javascript",
+   "bytes": 2253
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/RoleRadioGroup-4792261a.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\RoleRadioGroup-4792261a.js",
+   "tipo": "text/javascript",
+   "bytes": 1105
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/RegionRedirection-17320efe.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\RegionRedirection-17320efe.js",
+   "tipo": "text/javascript",
+   "bytes": 2111
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/RoleSelectionModal-9ac8b797.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\RoleSelectionModal-9ac8b797.js",
+   "tipo": "text/javascript",
+   "bytes": 1750
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/tabs-0e40182c.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\tabs-0e40182c.js",
+   "tipo": "text/javascript",
+   "bytes": 7514
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/Metropolis-Regular-e920e6b0.woff2",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\Metropolis-Regular-e920e6b0.woff2",
+   "tipo": "binary/octet-stream",
+   "bytes": 24152
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/Metropolis-Medium-f3a73873.woff2",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\Metropolis-Medium-f3a73873.woff2",
+   "tipo": "binary/octet-stream",
+   "bytes": 26360
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/Metropolis-Bold-9a712a2c.woff2",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\Metropolis-Bold-9a712a2c.woff2",
+   "tipo": "binary/octet-stream",
+   "bytes": 26428
+  },
+  {
+   "url": "https://connect.facebook.net/signals/config/1004456427485907?v=2.9.441&r=stable&domain=recargajogo.com.br&hme=abf59d235177e3601acac6035d7c2a28fadbda4b0c64009bc203ceed9fa8bb90&ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C116%2C162%2C72%2C186%2C110%2C185%2C212%2C264%2C37%2C84%2C284%2C283%2C282%2C14%2C25%2C28%2C40%2C62%2C118%2C68%2C10%2C73%2C112%2C113%2C114%2C120%2C145%2C38%2C36%2C147%2C148%2C149%2C144%2C143%2C173%2C86%2C176%2C174%2C175%2C57%2C69%2C67%2C138%2C19%2C180%2C52%2C335%2C336%2C337%2C334%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C164%2C87%2C127%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C125%2C161%2C165%2C53%2C126%2C29%2C26%2C134%2C79%2C43%2C167%2C166%2C168%2C158%2C156%2C30%2C42%2C66%2C124%2C179%2C80%2C21%2C129%2C93%2C76%2C23%2C97%2C98%2C131%2C96%2C152%2C151%2C155%2C109%2C178%2C181%2C41%2C351%2C353%2C374%2C257%2C239%2C70%2C240%2C238%2C377%2C368%2C59%2C258%2C122%2C146%2C92%2C136%2C61%2C54%2C56%2C128%2C135%2C141%2C140%2C65%2C74%2C169%2C88%2C89%2C130%2C44%2C39%2C60%2C63%2C115%2C183%2C1%2C139%2C16%2C137%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C133%2C101%2C100%2C188%2C189%2C106%2C107%2C9%2C117%2C187%2C58%2C159%2C99%2C91%2C81%2C132%2C121%2C170%2C50%2C160%2C0%2C94%2C153%2C157%2C171%2C45%2C123%2C13%2C190%2C277%2C275%2C270%2C272%2C273%2C274%2C271%2C269%2C256%2C276%2C278%2C268%2C219%2C220%2C280%2C279%2C281%2C267%2C266%2C367%2C201%2C203%2C204%2C205%2C209%2C208%2C210%2C206%2C207%2C202%2C200%2C199%2C232%2C227%2C230%2C231%2C225%2C402%2C228%2C229%2C260%2C226%2C224%2C288%2C244%2C217%2C218%2C214%2C215%2C216%2C213%2C211%2C222%2C223%2C221%2C338%2C395%2C360%2C361%2C363%2C364%2C362%2C359%2C358%2C347%2C346%2C344%2C345%2C349%2C348%2C343%2C233%2C291%2C298%2C299%2C292%2C294%2C297%2C295%2C296%2C293%2C290%2C309%2C303%2C306%2C302%2C310%2C307%2C301%2C305%2C308%2C304%2C300%2C354%2C371",
+   "arquivo": "connect.facebook.net\\signals\\config\\1004456427485907\\index.a99b9bf9.html",
+   "tipo": "application/x-javascript; charset=utf-8",
+   "bytes": 156993
+  },
+  {
+   "url": "https://www.googletagmanager.com/gtag/js?id=G-9TMTW7BN3E&cx=c&gtm=4e6bg0h1",
+   "arquivo": "www.googletagmanager.com\\gtag\\js\\index.9587d961.html",
+   "tipo": "application/javascript; charset=UTF-8",
+   "bytes": 534585
+  },
+  {
+   "url": "https://recargajogo.com.br/api/shop/apps?region=BR&language=pt",
+   "arquivo": "recargajogo.com.br\\api\\shop\\apps\\index.70f6f77f.html",
+   "tipo": "application/json; charset=utf-8",
+   "bytes": 6421
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/FF-4470ba9b.jpg",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\FF-4470ba9b.jpg",
+   "tipo": "image/jpeg",
+   "bytes": 28613
+  },
+  {
+   "url": "https://recargajogo.com.br/api/auth/get_user_info/multi",
+   "arquivo": "recargajogo.com.br\\api\\auth\\get_user_info\\multi\\index.html",
+   "tipo": "application/json; charset=utf-8",
+   "bytes": 31
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/153/icon.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\153\\icon.png",
+   "tipo": "image/png",
+   "bytes": 62118
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/067/icon.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\067\\icon.png",
+   "tipo": "image/png",
+   "bytes": 74381
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/161/icon.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\161\\icon.png",
+   "tipo": "image/png",
+   "bytes": 71180
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/151/icon.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\151\\icon.png",
+   "tipo": "image/png",
+   "bytes": 63027
+  },
+  {
+   "url": "https://recargajogo.com.br/api/shop/banners?region=BR&language=pt",
+   "arquivo": "recargajogo.com.br\\api\\shop\\banners\\index.70f6f77f.html",
+   "tipo": "application/json; charset=utf-8",
+   "bytes": 1016
+  },
+  {
+   "url": "https://recargajogo.com.br/api/shop/mshop_redirects?app_id=100067&region=BR&language=pt",
+   "arquivo": "recargajogo.com.br\\api\\shop\\mshop_redirects\\index.b703bf4e.html",
+   "tipo": "application/json; charset=utf-8",
+   "bytes": 16
+  },
+  {
+   "url": "https://recargajogo.com.br/api/shop/apps/flash_sale?app_id=100067&region=BR&language=pt",
+   "arquivo": "recargajogo.com.br\\api\\shop\\apps\\flash_sale\\index.b703bf4e.html",
+   "tipo": "application/json; charset=utf-8",
+   "bytes": 2
+  },
+  {
+   "url": "https://recargajogo.com.br/api/shop/loyalty/info?app_id=100067&region=BR&packed_role_id=0",
+   "arquivo": "recargajogo.com.br\\api\\shop\\loyalty\\info\\index.ec3d1006.html",
+   "tipo": "application/json",
+   "bytes": 34
+  },
+  {
+   "url": "https://recargajogo.com.br/api/shop/event/ongoing_events?app_id=100067&region=BR",
+   "arquivo": "recargajogo.com.br\\api\\shop\\event\\ongoing_events\\index.ad2bf07c.html",
+   "tipo": "application/json; charset=utf-8",
+   "bytes": 316
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/067/event/0000/000/271/special_event_revamp.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\067\\event\\0000\\000\\271\\special_event_revamp.png",
+   "tipo": "image/png",
+   "bytes": 363712
+  },
+  {
+   "url": "https://recargajogo.com.br/api/shop/apps/channels?app_id=100067&region=BR&language=pt",
+   "arquivo": "recargajogo.com.br\\api\\shop\\apps\\channels\\index.b703bf4e.html",
+   "tipo": "application/json; charset=utf-8",
+   "bytes": 122276
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/067/item/0407/104/201/pt/logo.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\067\\item\\0407\\104\\201\\pt\\logo.png",
+   "tipo": "image/png",
+   "bytes": 25805
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/067/point.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\067\\point.png",
+   "tipo": "image/png",
+   "bytes": 2582
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/067/rebate/0000/000/002/logo.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\067\\rebate\\0000\\000\\002\\logo.png",
+   "tipo": "image/png",
+   "bytes": 38382
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/067/rebate/0000/081/041/logo.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\067\\rebate\\0000\\081\\041\\logo.png",
+   "tipo": "image/png",
+   "bytes": 42047
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/067/item/0803/000/000/logo.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\067\\item\\0803\\000\\000\\logo.png",
+   "tipo": "image/png",
+   "bytes": 24564
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/freefire-freeitem-bg-light-3457641a.png",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\freefire-freeitem-bg-light-3457641a.png",
+   "tipo": "image/png",
+   "bytes": 18700
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/067/item/0801/039/054/pt/logo.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\067\\item\\0801\\039\\054\\pt\\logo.png",
+   "tipo": "image/png",
+   "bytes": 42121
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/067/rebate/0000/004/007/logo.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\067\\rebate\\0000\\004\\007\\logo.png",
+   "tipo": "image/png",
+   "bytes": 32981
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/static/channel/0000/211/985/icon.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\static\\channel\\0000\\211\\985\\icon.png",
+   "tipo": "image/png",
+   "bytes": 4889
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/webmain/static/payment_center/br/menu/br_nupay_mb.png",
+   "arquivo": "cdn-gop.garenanow.com\\webmain\\static\\payment_center\\br\\menu\\br_nupay_mb.png",
+   "tipo": "image/png",
+   "bytes": 4214
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/webmain/static/payment_center/br/menu/picpay_mb.png",
+   "arquivo": "cdn-gop.garenanow.com\\webmain\\static\\payment_center\\br\\menu\\picpay_mb.png",
+   "tipo": "image/png",
+   "bytes": 5820
+  },
+  {
+   "url": "https://recargajogo.com.br/api/shop/billboard?region=BR",
+   "arquivo": "recargajogo.com.br\\api\\shop\\billboard\\index.1bb32a36.html",
+   "tipo": "application/json; charset=utf-8",
+   "bytes": 16
+  },
+  {
+   "url": "https://recargajogo.com.br/api/auth/check_session",
+   "arquivo": "recargajogo.com.br\\api\\auth\\check_session\\index.html",
+   "tipo": "application/json; charset=utf-8",
+   "bytes": 31
+  },
+  {
+   "url": "https://contentgarena-a.akamaihd.net/GOP/newshop_banners/47BED91C7ABCF1EA.png?v=1752155361",
+   "arquivo": "contentgarena-a.akamaihd.net\\GOP\\newshop_banners\\47BED91C7ABCF1EA.459b7d36.png",
+   "tipo": "image/png",
+   "bytes": 369449
+  },
+  {
+   "url": "https://contentgarena-a.akamaihd.net/GOP/newshop_banners/6B8A8530C0409F77.jpg?v=1793117807",
+   "arquivo": "contentgarena-a.akamaihd.net\\GOP\\newshop_banners\\6B8A8530C0409F77.27fd9917.jpg",
+   "tipo": "image/jpeg",
+   "bytes": 314535
+  },
+  {
+   "url": "https://contentgarena-a.akamaihd.net/GOP/newshop_banners/6FAE33F6E97F3F4C.png?v=1765290163",
+   "arquivo": "contentgarena-a.akamaihd.net\\GOP\\newshop_banners\\6FAE33F6E97F3F4C.974befc2.png",
+   "tipo": "image/png",
+   "bytes": 440612
+  },
+  {
+   "url": "https://contentgarena-a.akamaihd.net/GOP/newshop_banners/84A5A24ACA0B1FCB.png?v=1793195841",
+   "arquivo": "contentgarena-a.akamaihd.net\\GOP\\newshop_banners\\84A5A24ACA0B1FCB.27463861.png",
+   "tipo": "image/png",
+   "bytes": 233936
+  },
+  {
+   "url": "https://contentgarena-a.akamaihd.net/GOP/newshop_banners/26B06340B596B357.png?v=1729016596",
+   "arquivo": "contentgarena-a.akamaihd.net\\GOP\\newshop_banners\\26B06340B596B357.67fdf715.png",
+   "tipo": "image/png",
+   "bytes": 379268
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/webmain/static/payment_center/br/menu/creditcard_mb.png",
+   "arquivo": "cdn-gop.garenanow.com\\webmain\\static\\payment_center\\br\\menu\\creditcard_mb.png",
+   "tipo": "image/png",
+   "bytes": 7823
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/static/channel/0000/211/321/icon.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\static\\channel\\0000\\211\\321\\icon.png",
+   "tipo": "image/png",
+   "bytes": 10767
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/webmain/static/payment_center/mx/menu/mx_mercado_mb.png",
+   "arquivo": "cdn-gop.garenanow.com\\webmain\\static\\payment_center\\mx\\menu\\mx_mercado_mb.png",
+   "tipo": "image/png",
+   "bytes": 5278
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/webmain/static/payment_center/br/menu/boleto_mb.png",
+   "arquivo": "cdn-gop.garenanow.com\\webmain\\static\\payment_center\\br\\menu\\boleto_mb.png",
+   "tipo": "image/png",
+   "bytes": 4653
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/static/channel/0000/211/137/icon.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\static\\channel\\0000\\211\\137\\icon.png",
+   "tipo": "image/png",
+   "bytes": 6766
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/static/channel/0000/211/988/icon.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\static\\channel\\0000\\211\\988\\icon.png",
+   "tipo": "image/png",
+   "bytes": 18579
+  },
+  {
+   "url": "render:https://recargajogo.com.br/",
+   "arquivo": "recargajogo.com.br\\index.render.html",
+   "tipo": "text/html",
+   "bytes": 0
+  },
+  {
+   "url": "https://recargajogo.com.br/?app=100067",
+   "arquivo": "recargajogo.com.br\\index.572c710d.html",
+   "tipo": "text/html; charset=utf-8",
+   "bytes": 6174
+  },
+  {
+   "url": "render:https://recargajogo.com.br/?app=100067",
+   "arquivo": "recargajogo.com.br\\index.572c710d.html",
+   "tipo": "text/html",
+   "bytes": 0
+  },
+  {
+   "url": "https://recargajogo.com.br/?app=100151",
+   "arquivo": "recargajogo.com.br\\index.81503a53.html",
+   "tipo": "text/html; charset=utf-8",
+   "bytes": 6174
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/DF-7118b9ef.jpg",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\DF-7118b9ef.jpg",
+   "tipo": "image/jpeg",
+   "bytes": 34802
+  },
+  {
+   "url": "https://recargajogo.com.br/api/shop/mshop_redirects?app_id=100151&region=BR&language=pt",
+   "arquivo": "recargajogo.com.br\\api\\shop\\mshop_redirects\\index.e363860c.html",
+   "tipo": "application/json; charset=utf-8",
+   "bytes": 16
+  },
+  {
+   "url": "https://recargajogo.com.br/api/shop/apps/flash_sale?app_id=100151&region=BR&language=pt",
+   "arquivo": "recargajogo.com.br\\api\\shop\\apps\\flash_sale\\index.e363860c.html",
+   "tipo": "application/json; charset=utf-8",
+   "bytes": 2
+  },
+  {
+   "url": "https://recargajogo.com.br/api/shop/event/ongoing_events?app_id=100151&region=BR",
+   "arquivo": "recargajogo.com.br\\api\\shop\\event\\ongoing_events\\index.073fbd4c.html",
+   "tipo": "application/json; charset=utf-8",
+   "bytes": 13
+  },
+  {
+   "url": "https://recargajogo.com.br/api/shop/apps/channels?app_id=100151&region=BR&language=pt",
+   "arquivo": "recargajogo.com.br\\api\\shop\\apps\\channels\\index.e363860c.html",
+   "tipo": "application/json; charset=utf-8",
+   "bytes": 183577
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/151/point.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\151\\point.png",
+   "tipo": "image/png",
+   "bytes": 7493
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/151/item/0030/600/002/logo.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\151\\item\\0030\\600\\002\\logo.png",
+   "tipo": "image/png",
+   "bytes": 18140
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/151/item/0030/200/026/logo.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\151\\item\\0030\\200\\026\\logo.png",
+   "tipo": "image/png",
+   "bytes": 18140
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/151/item/0030/200/027/logo.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\151\\item\\0030\\200\\027\\logo.png",
+   "tipo": "image/png",
+   "bytes": 18140
+  },
+  {
+   "url": "render:https://recargajogo.com.br/?app=100151",
+   "arquivo": "recargajogo.com.br\\index.81503a53.html",
+   "tipo": "text/html",
+   "bytes": 0
+  },
+  {
+   "url": "https://recargajogo.com.br/?app=100153",
+   "arquivo": "recargajogo.com.br\\index.f278dd12.html",
+   "tipo": "text/html; charset=utf-8",
+   "bytes": 6174
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/HIQ-bb64d382.jpg",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\HIQ-bb64d382.jpg",
+   "tipo": "image/jpeg",
+   "bytes": 45520
+  },
+  {
+   "url": "https://recargajogo.com.br/api/shop/apps/flash_sale?app_id=100153&region=BR&language=pt",
+   "arquivo": "recargajogo.com.br\\api\\shop\\apps\\flash_sale\\index.9eabd296.html",
+   "tipo": "application/json; charset=utf-8",
+   "bytes": 2
+  },
+  {
+   "url": "https://recargajogo.com.br/api/shop/mshop_redirects?app_id=100153&region=BR&language=pt",
+   "arquivo": "recargajogo.com.br\\api\\shop\\mshop_redirects\\index.9eabd296.html",
+   "tipo": "application/json; charset=utf-8",
+   "bytes": 16
+  },
+  {
+   "url": "https://recargajogo.com.br/api/shop/event/ongoing_events?app_id=100153&region=BR",
+   "arquivo": "recargajogo.com.br\\api\\shop\\event\\ongoing_events\\index.5b1d4c34.html",
+   "tipo": "application/json; charset=utf-8",
+   "bytes": 13
+  },
+  {
+   "url": "https://recargajogo.com.br/api/shop/apps/channels?app_id=100153&region=BR&language=pt",
+   "arquivo": "recargajogo.com.br\\api\\shop\\apps\\channels\\index.9eabd296.html",
+   "tipo": "application/json; charset=utf-8",
+   "bytes": 339621
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/153/item/0000/191/543/pt/logo.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\153\\item\\0000\\191\\543\\pt\\logo.png",
+   "tipo": "image/png",
+   "bytes": 40884
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/153/point.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\153\\point.png",
+   "tipo": "image/png",
+   "bytes": 6852
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/153/item/0000/191/544/pt/logo.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\153\\item\\0000\\191\\544\\pt\\logo.png",
+   "tipo": "image/png",
+   "bytes": 39569
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/153/item/0000/191/546/pt/logo.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\153\\item\\0000\\191\\546\\pt\\logo.png",
+   "tipo": "image/png",
+   "bytes": 34674
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/153/item/0000/191/545/pt/logo.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\153\\item\\0000\\191\\545\\pt\\logo.png",
+   "tipo": "image/png",
+   "bytes": 34011
+  },
+  {
+   "url": "https://contentgarena-a.akamaihd.net/GOP/newshop_banners/47C95AECB3BF44D6.jpg?v=1753969332",
+   "arquivo": "contentgarena-a.akamaihd.net\\GOP\\newshop_banners\\47C95AECB3BF44D6.57c12435.jpg",
+   "tipo": "image/jpeg",
+   "bytes": 326285
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/153/item/0000/041/309/pt/logo.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\153\\item\\0000\\041\\309\\pt\\logo.png",
+   "tipo": "image/png",
+   "bytes": 40597
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/153/item/0000/191/541/pt/logo.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\153\\item\\0000\\191\\541\\pt\\logo.png",
+   "tipo": "image/png",
+   "bytes": 37937
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/153/item/0000/041/308/pt/logo.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\153\\item\\0000\\041\\308\\pt\\logo.png",
+   "tipo": "image/png",
+   "bytes": 38813
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/153/item/0000/191/542/pt/logo.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\153\\item\\0000\\191\\542\\pt\\logo.png",
+   "tipo": "image/png",
+   "bytes": 37710
+  },
+  {
+   "url": "render:https://recargajogo.com.br/?app=100153",
+   "arquivo": "recargajogo.com.br\\index.f278dd12.html",
+   "tipo": "text/html",
+   "bytes": 0
+  },
+  {
+   "url": "https://recargajogo.com.br/?app=100161",
+   "arquivo": "recargajogo.com.br\\index.93dc167f.html",
+   "tipo": "text/html; charset=utf-8",
+   "bytes": 6174
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/MHO-2dc9525d.jpg",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\MHO-2dc9525d.jpg",
+   "tipo": "image/jpeg",
+   "bytes": 34567
+  },
+  {
+   "url": "https://recargajogo.com.br/api/shop/mshop_redirects?app_id=100161&region=BR&language=pt",
+   "arquivo": "recargajogo.com.br\\api\\shop\\mshop_redirects\\index.3915096e.html",
+   "tipo": "application/json; charset=utf-8",
+   "bytes": 16
+  },
+  {
+   "url": "https://recargajogo.com.br/api/shop/apps/flash_sale?app_id=100161&region=BR&language=pt",
+   "arquivo": "recargajogo.com.br\\api\\shop\\apps\\flash_sale\\index.3915096e.html",
+   "tipo": "application/json; charset=utf-8",
+   "bytes": 2
+  },
+  {
+   "url": "https://recargajogo.com.br/api/shop/event/ongoing_events?app_id=100161&region=BR",
+   "arquivo": "recargajogo.com.br\\api\\shop\\event\\ongoing_events\\index.ec178498.html",
+   "tipo": "application/json; charset=utf-8",
+   "bytes": 13
+  },
+  {
+   "url": "https://recargajogo.com.br/api/shop/apps/channels?app_id=100161&region=BR&language=pt",
+   "arquivo": "recargajogo.com.br\\api\\shop\\apps\\channels\\index.3915096e.html",
+   "tipo": "application/json; charset=utf-8",
+   "bytes": 41671
+  },
+  {
+   "url": "https://cdn-gop.garenanow.com/gop/app/0000/100/161/point.png",
+   "arquivo": "cdn-gop.garenanow.com\\gop\\app\\0000\\100\\161\\point.png",
+   "tipo": "image/png",
+   "bytes": 5836
+  },
+  {
+   "url": "render:https://recargajogo.com.br/?app=100161",
+   "arquivo": "recargajogo.com.br\\index.93dc167f.html",
+   "tipo": "text/html",
+   "bytes": 0
+  },
+  {
+   "url": "https://recargajogo.com.br/event/4?app=100067",
+   "arquivo": "recargajogo.com.br\\event\\4\\index.572c710d.html",
+   "tipo": "text/html; charset=utf-8",
+   "bytes": 6174
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/AutoLogin-b4aec2e8.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\AutoLogin-b4aec2e8.js",
+   "tipo": "text/javascript",
+   "bytes": 2261
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/ViewEvent-48f0f3b1.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\ViewEvent-48f0f3b1.js",
+   "tipo": "text/javascript",
+   "bytes": 8816
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/free-fire-0a5d6cf9.png",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\free-fire-0a5d6cf9.png",
+   "tipo": "image/png",
+   "bytes": 132813
+  },
+  {
+   "url": "render:https://recargajogo.com.br/event/4?app=100067",
+   "arquivo": "recargajogo.com.br\\event\\4\\index.572c710d.html",
+   "tipo": "text/html",
+   "bytes": 0
+  },
+  {
+   "url": "https://recargajogo.com.br/faq",
+   "arquivo": "recargajogo.com.br\\faq\\index.html",
+   "tipo": "text/html; charset=utf-8",
+   "bytes": 6174
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/Empty-7bfc92ba.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\Empty-7bfc92ba.js",
+   "tipo": "text/javascript",
+   "bytes": 322
+  },
+  {
+   "url": "https://assets.recargajogo.com.br/gop/mshop/www/live/assets/ViewFaq-8aaec43c.js",
+   "arquivo": "assets.recargajogo.com.br\\gop\\mshop\\www\\live\\assets\\ViewFaq-8aaec43c.js",
+   "tipo": "text/javascript",
+   "bytes": 23144
+  },
+  {
+   "url": "https://recargajogo.com.br/api/shop/faq/json?region=BR&language=pt",
+   "arquivo": "recargajogo.com.br\\api\\shop\\faq\\json\\index.70f6f77f.html",
+   "tipo": "application/json; charset=utf-8",
+   "bytes": 7012
+  },
+  {
+   "url": "render:https://recargajogo.com.br/faq",
+   "arquivo": "recargajogo.com.br\\faq\\index.render.html",
+   "tipo": "text/html",
+   "bytes": 0
+  }
+ ]
+}

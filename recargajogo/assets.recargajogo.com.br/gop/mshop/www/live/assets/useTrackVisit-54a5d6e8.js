@@ -1,0 +1,1 @@
+import{r as c}from"./react-0e2a0c96.js";import{al as u}from"./index-e565bf38.js";const a=(r,s=!0)=>{const{trackVisit:e}=u(),t=c.useRef(!1);c.useEffect(()=>{t.current||!s||(t.current=!0,e(r))},[s,t,e,r])};export{a as u};

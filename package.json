@@ -1,0 +1,13 @@
+{
+  "name": "recargajogo-clone",
+  "version": "1.0.0",
+  "description": "Clone Recarga Jogo com checkout e integração Pix PinguPag",
+  "main": "servir.cjs",
+  "scripts": {
+    "start": "node servir.cjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,1 @@
+import{r as a}from"./react-0e2a0c96.js";import{c1 as c,cC as f}from"./index-e565bf38.js";const l=t=>{const s=a.useCallback(()=>t?Math.max(0,t-c()):0,[t]),[o,r]=a.useState(s());return f(()=>r(s()),o>0?1e3:null),a.useEffect(()=>{r(s())},[t,s]),o};export{l as u};

