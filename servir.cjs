@@ -51,12 +51,36 @@ function achar(pathname, search) {
   for (const p of [comBusca(pathname, search), pathname]) {
     candidatos.push(p, ...hosts.map((h) => path.join(h, p)));
   }
+
+  // 1. Busca exata ou com hash de query
   for (const c of candidatos) {
     const abs = path.join(pasta, c);
     if (!abs.startsWith(pasta)) continue;
     if (fs.existsSync(abs) && fs.statSync(abs).isFile()) return abs;
     if (fs.existsSync(path.join(abs, 'index.html'))) return path.join(abs, 'index.html');
   }
+
+  // 2. Fallback inteligente para arquivos com hash intermediário (ex: nome.hash.ext)
+  for (const c of candidatos) {
+    const abs = path.join(pasta, c);
+    if (!abs.startsWith(pasta)) continue;
+    const dir = path.dirname(abs);
+    const ext = path.extname(abs);
+    const base = path.basename(abs, ext);
+
+    if (ext && fs.existsSync(dir) && fs.statSync(dir).isDirectory()) {
+      try {
+        const files = fs.readdirSync(dir);
+        // Procurar por base.<hash>.ext ou arquivos que comecem com base
+        const found = files.find(f => f.startsWith(base + '.') && f.endsWith(ext));
+        if (found) {
+          const matched = path.join(dir, found);
+          if (fs.statSync(matched).isFile()) return matched;
+        }
+      } catch (err) {}
+    }
+  }
+
   return null;
 }
 
@@ -141,6 +165,11 @@ async function requestHandler(req, res) {
   }
 
   const p = decodeURIComponent(rawPath);
+
+  // Extrair query string limpa (removendo __path injetado pela Vercel)
+  const cleanSearch = new URLSearchParams(url.search);
+  cleanSearch.delete('__path');
+  const realSearch = cleanSearch.toString() ? ('?' + cleanSearch.toString()) : '';
 
   // --- CORS preflight ---
   if (req.method === 'OPTIONS') {
@@ -268,7 +297,7 @@ async function requestHandler(req, res) {
   // ======================================================
   // Servir Arquivos Estáticos
   // ======================================================
-  const abs = achar(p, url.search);
+  const abs = achar(p, realSearch);
   if (!abs) {
     res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
     return res.end('não capturado: ' + p);
